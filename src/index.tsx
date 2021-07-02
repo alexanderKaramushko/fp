@@ -1,4 +1,7 @@
-import React from 'react';
-import { render } from 'react-dom';
-
-render(<h1>Functional programming.</h1>, document.getElementById('app'));
+// import './unary';
+// import './identity';
+// import './constant';
+// import './spreadArgs';
+// import './partial';
+// import './curry';
+import './compose';

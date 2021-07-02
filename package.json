@@ -12,7 +12,8 @@
     "build-prod": "parcel build src/index.html"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "axios": "^0.21.1",
+    "rambda": "^6.7.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
@@ -20,7 +21,6 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-typescript": "^7.9.0",
-    "@types/lodash": "^4.14.170",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^2.31.0",

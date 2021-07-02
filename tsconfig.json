@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "module": "ESNext",
     "moduleResolution": "node",
@@ -10,7 +9,7 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "strict": true,
-    "target": "ESNext",
+    "target": "ESNext"
   },
   "include": [
     "./src/**/*"
