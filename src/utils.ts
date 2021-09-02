@@ -52,16 +52,15 @@ export function curry<T>(fn: Function, arity: number): Function {
 }
 
 export function compose<T>(...fns: Function[]): (arg: unknown) => T {
-  return function makeComposition(arg: unknown): T {
-    const copiedFns = fns.reverse();
-
-    let result: unknown = null;
+  return function makeComposition(result: unknown): T {
+    const copiedFns = fns.slice();
 
     while (copiedFns.length > 0) {
       const fn = copiedFns.pop();
 
       if (fn) {
-        result = fn(result || arg);
+        // eslint-disable-next-line no-param-reassign
+        result = fn(result);
       }
     }
 
