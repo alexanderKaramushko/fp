@@ -29,6 +29,11 @@ class Maybe {
     return this.isNothing ? Maybe.of(null) : this.$value;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ap(otherFunctor: any): unknown {
+    return otherFunctor.map(this.$value);
+  }
+
 }
 
 /**
