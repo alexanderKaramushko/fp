@@ -1,3 +1,6 @@
+import { curry as curryR } from 'rambda';
+import Maybe from './functors/Maybe';
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function unary<T>(fn: (...args: any[]) => T): (firstArg: unknown) => T {
   return function makeUnary(firstArg: unknown): T {
@@ -71,3 +74,7 @@ export function compose<T>(...fns: Function[]): (arg: unknown) => T {
 export function pipe<T>(...fns: Function[]): (arg: unknown) => T {
   return compose(...fns.reverse());
 }
+
+// todo some issues with my curring
+// safeProp :: Key -> {Key: a} -> Maybe a
+export const safeProp = curryR((x, obj) => Maybe.of(obj[x]));

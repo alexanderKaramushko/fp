@@ -1,4 +1,5 @@
 import { curry } from 'rambda';
+import Maybe from './Maybe';
 
 /**
  * Маппинг любого функтора

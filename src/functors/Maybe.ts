@@ -25,6 +25,10 @@ class Maybe {
     return this.isNothing ? 'Nothing' : `Just(${this.$value})`;
   }
 
+  join(): unknown {
+    return this.isNothing ? Maybe.of(null) : this.$value;
+  }
+
 }
 
 /**

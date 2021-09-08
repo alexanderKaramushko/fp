@@ -2,22 +2,22 @@ import { compose } from 'rambda';
 
 class IO {
 
-  private $value: () => unknown;
+  public unsafePerformIO: () => unknown;
 
   constructor(fn: () => unknown) {
-    this.$value = fn;
+    this.unsafePerformIO = fn;
   }
 
-  static of(value: () => unknown): IO {
+  static of(value: () => unknown | unknown): IO {
     return new IO(() => value);
   }
 
   map(fn: (arg: unknown) => unknown): IO {
-    return new IO(compose(fn, this.$value));
+    return new IO(compose(fn, this.unsafePerformIO));
   }
 
   inspect(): unknown {
-    return `IO(${this.$value()})`;
+    return `IO(${this.unsafePerformIO()})`;
   }
 
 }

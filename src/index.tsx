@@ -13,11 +13,16 @@
 
 // Упражнения
 // import './exercises/compose';
-import './exercises/functor';
-import './style.css';
+// import './exercises/functor';
+// import './style.css';
 // import './exercises/todo';
+// import './exercises/monad';
+// import './exercises/applicative_functors';
 
 // Функторы
 // import './maybe';
 // import './either';
 // import './io';
+
+// Монады
+// import './monads/monad';
