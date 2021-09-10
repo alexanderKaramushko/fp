@@ -16,7 +16,7 @@
 // import './exercises/functor';
 // import './style.css';
 // import './exercises/todo';
-// import './exercises/monad';
+import './exercises/monad';
 // import './exercises/applicative_functors';
 
 // Функторы
