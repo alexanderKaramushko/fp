@@ -4,4 +4,4 @@
 // import './spreadArgs';
 // import './partial';
 // import './curry';
-import './compose';
+// import './compose';
