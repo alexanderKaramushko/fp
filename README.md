@@ -1,1 +1,1 @@
-# React reactivity explanation.
+# FP utilities and some basic FP concepts like functors, monads etc.
